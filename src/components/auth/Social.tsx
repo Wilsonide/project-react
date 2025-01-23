@@ -10,7 +10,9 @@ export const Social = () => {
         size="lg"
         className="w-full flex items-center gap-x-2"
         variant="outline"
-        onClick={() => {}}
+        onClick={() => {
+          window.location.href = "http://localhost:3500/auth/google"
+        }}
       >
         <p>google signup</p>
         <img src="/google.png" alt="Google" width={20} height={20} />
@@ -19,7 +21,9 @@ export const Social = () => {
         size="lg"
         className="w-full flex items-center gap-x-2"
         variant="outline"
-        onClick={() => {}}
+        onClick={() => {
+          window.location.href = "http://localhost:3500/auth/github"
+        }}
       >
         <p>github signup</p>
         <img

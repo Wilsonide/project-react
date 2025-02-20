@@ -6,7 +6,7 @@ import { Navbar } from "./components/navbar";
 
 export default function LandingLayout() {
   return (
-    <div className="h-full">
+    <div className="min-h-screen  bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-800 to-sky-600">
       <Navbar />
       <main className="h-full pt-40">
         <div className="min-h-full flex flex-col">

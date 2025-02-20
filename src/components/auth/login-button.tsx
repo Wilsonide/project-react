@@ -26,7 +26,7 @@ export const LoginButton = ({
       <Dialog>
         <DialogTrigger asChild={asChild}>
           <div>
-            <Button size="sm">{children}</Button>
+            <Button size="sm" variant="secondary" >{children}</Button>
           </div>
         </DialogTrigger>
         <DialogContent>
@@ -37,7 +37,7 @@ export const LoginButton = ({
   }
 
   return (
-    <Button className="cursor-pointer" onClick={onClick} variant="ghost">
+    <Button className="cursor-pointer text-white" onClick={onClick} variant="ghost">
       {children}
     </Button>
   );

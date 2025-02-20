@@ -39,7 +39,6 @@ export const LoginForm = () => {
       setError("");
       const res = await Axios.post('/auth/login',values)
           
-      console.log(res.data);
       
       setError(res.data.error);
         
@@ -58,7 +57,7 @@ export const LoginForm = () => {
     } catch (error: any) {
       if (!error?.response) {
         setError('No server response')
-      }
+      } else setError('User does not exist')
       
     } finally {
       setIsloading(false);

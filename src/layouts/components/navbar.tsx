@@ -14,7 +14,7 @@ export const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-50 bg-background fixed top-0 flex items-center w-full p-6 dark:bg-[#1f1f1f]",
+        "z-50 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-800 to-blue-800 fixed top-0 flex items-center w-full p-6 dark:bg-[#1f1f1f]",
         scrolled && "border-b shadow-sm",
       )}
     >

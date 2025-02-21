@@ -46,7 +46,7 @@ export interface ButtonProps
 
 const LogoutButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
-    const {setAuth} = useAuth()
+    const {setAuth, Auth} = useAuth()
     const axios = useAxiosPrivate()
     const Comp = asChild ? Slot : "button";
     const navigate = useNavigate();
@@ -58,6 +58,7 @@ const LogoutButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         name: '',
         role: '',
         profile: '',
+        emailVerified: Auth?.emailVerified
       })
       navigate("/");
     };

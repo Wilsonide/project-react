@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseURL = 'http://localhost:3500';
+const baseURL = 'https://boring-anny-wilsonide-708b7cef.koyeb.app';
 
 export const Axios = axios.create({
     baseURL,

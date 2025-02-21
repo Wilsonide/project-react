@@ -57,7 +57,7 @@ export const LoginForm = () => {
     } catch (error: any) {
       if (!error?.response) {
         setError('No server response')
-      } else setError('User does not exist')
+      }
       
     } finally {
       setIsloading(false);

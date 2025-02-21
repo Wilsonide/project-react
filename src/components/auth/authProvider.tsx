@@ -6,7 +6,7 @@ type AuthType = {
   name: string,
   role: string,
   profile: string
-  emailVerified: boolean,
+  emailVerified: boolean | undefined,
 }
 
 type AuthContextType = {

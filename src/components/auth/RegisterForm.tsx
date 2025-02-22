@@ -18,8 +18,10 @@ import { Button } from "../ui/button";
 import { FormError } from "../form-error";
 import { FormSuccess } from "../form-success";
 import { Axios } from "@/lib/axios";
+import { useNavigate } from "react-router-dom";
 
 export const RegisterForm = () => {
+  const navigate = useNavigate()
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
@@ -33,7 +35,7 @@ export const RegisterForm = () => {
       const res = await Axios.post('/auth/register',values)
       setSuccess(res.data.success)
       setError(res.data.error);
-      form.reset();
+      navigate("/auth/login")
       
       
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

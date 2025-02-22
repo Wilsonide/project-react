@@ -29,7 +29,7 @@ export const Heading = () => {
       )}
 
       {!user?.email && (
-        <LoginButton mode="modal">Edukate Signup</LoginButton>
+        <LoginButton>Edukate Signup</LoginButton>
       )}
     </div>
   );

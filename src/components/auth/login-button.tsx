@@ -37,7 +37,7 @@ export const LoginButton = ({
   }
 
   return (
-    <Button className="cursor-pointer text-white" onClick={onClick} variant="ghost">
+    <Button className="cursor-pointer" onClick={onClick} variant="secondary">
       {children}
     </Button>
   );

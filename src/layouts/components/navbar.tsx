@@ -19,11 +19,14 @@ export const Navbar = () => {
       )}
     >
       <Logo />
-      <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
+      <div className="ml-auto justify-end w-full flex items-center gap-x-2">
         {!Auth?.email &&(
           <>
             <LoginButton>Edukate signin</LoginButton>
-            <LoginButton mode="modal">Login</LoginButton>
+            <div className="hidden sm:block">
+              <LoginButton mode="modal">Login</LoginButton>
+            </div>
+            
           </>
         )}
 

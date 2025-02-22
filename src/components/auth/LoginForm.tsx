@@ -19,7 +19,7 @@ import { Button } from "../ui/button";
 import { FormError } from "../form-error";
 import { FormSuccess } from "../form-success";
 import { Axios } from "@/lib/axios";
-import {Link, useLocation, useNavigate } from "react-router-dom";
+import {Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 
 export const LoginForm = () => {
  
@@ -31,6 +31,9 @@ export const LoginForm = () => {
   const [showTwoFactor, setShowTwoFactor] = useState(false);
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
+  const [searchParams] = useSearchParams();
+
+  const urlError = searchParams.get("oauth_error") || ''
 
   const onSubmit = async(values: z.infer<typeof loginSchema>) => {
     try {
@@ -58,7 +61,7 @@ export const LoginForm = () => {
       if (!error?.response) {
         setError('No server response')
       }
-      
+      else setError('No record found')
     } finally {
       setIsloading(false);
     }
@@ -156,7 +159,7 @@ export const LoginForm = () => {
               </>
             )}
           </div>
-          <FormError message={error} />
+          <FormError message={error || urlError} />
           <FormSuccess message={success} />
           <Button className="w-full " type="submit" disabled={loading}>
             {showTwoFactor ? "Confirm" : "Login"}

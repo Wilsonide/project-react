@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export const Logo = () => {
   return (
-    <div className={cn("hidden md:flex items-center gap-x-2")}>
+    <div className={cn("flex items-center gap-x-2")}>
       {/* <img
         src="/logo.svg"
         height="40"

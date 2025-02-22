@@ -20,7 +20,7 @@ export const Navbar = () => {
     >
       <Logo />
       <div className="ml-auto justify-end w-full flex items-center gap-x-2">
-        {!Auth?.email &&(
+        {!Auth?.accessToken &&(
           <>
             <LoginButton>Edukate signin</LoginButton>
             <div className="hidden sm:block">
@@ -30,7 +30,7 @@ export const Navbar = () => {
           </>
         )}
 
-        {Auth?.email && (
+        {Auth?.accessToken && (
           <>
             <Button
               asChild

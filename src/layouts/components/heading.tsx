@@ -19,7 +19,7 @@ export const Heading = () => {
       </h3>
 
 
-      {user?.email && (
+      {user?.accessToken && (
         <Button>
           <Link to="/dashboard" className="flex items-center">
             Enter Account
@@ -28,8 +28,8 @@ export const Heading = () => {
         </Button>
       )}
 
-      {!user?.email && (
-        <LoginButton>Edukate Signup</LoginButton>
+      {!user?.accessToken && (
+        <LoginButton>Edukate Signin</LoginButton>
       )}
     </div>
   );

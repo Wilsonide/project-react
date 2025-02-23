@@ -11,7 +11,7 @@ export const Social = () => {
         className="w-full flex items-center gap-x-2"
         variant="outline"
         onClick={() => {
-          window.location.href = "https://boring-anny-wilsonide-708b7cef.koyeb.app/auth/google"
+          window.location.href = "http://localhost:8000/auth/google"
         }}
       >
         <p>google signup</p>
@@ -22,7 +22,7 @@ export const Social = () => {
         className="w-full flex items-center gap-x-2"
         variant="outline"
         onClick={() => {
-          window.location.href = "https://boring-anny-wilsonide-708b7cef.koyeb.app/auth/github"
+          window.location.href = "http://localhost:8000/auth/github"
         }}
       >
         <p>github signup</p>

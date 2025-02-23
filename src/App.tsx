@@ -17,15 +17,16 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path='/' element={<LandingLayout/>}/>
         <Route element={<PersistLogin/>}>
+          <Route path='/' element={<LandingLayout/>}/>
           <Route element ={<RequireAuth role='USER'/>}>
-            <Route element={<RootLayout/>}>
-              <Route path='/dashboard' element={<Home/>}/>
-              <Route path="/about"element={<About/>}/>
-            </Route>
+              <Route element={<RootLayout/>}>
+                <Route path='/dashboard' element={<Home/>}/>
+                <Route path="/about"element={<About/>}/>
+              </Route>
           </Route>
         </Route>
+  
         
         <Route path="/auth" element={<AuthLayout/>}>
           <Route path="login" element={<LoginForm/>}/>

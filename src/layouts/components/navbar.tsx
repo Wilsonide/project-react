@@ -35,7 +35,7 @@ export const Navbar = () => {
             <Button
               asChild
               size="sm"
-              variant="link"
+              variant="secondary"
               className={cn("font-semibold",)}
             >
               <Link to="/dashboard">Enter Account </Link>

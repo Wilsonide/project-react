@@ -20,7 +20,7 @@ export const Heading = () => {
 
 
       {user?.accessToken && (
-        <Button>
+        <Button variant='secondary'>
           <Link to="/dashboard" className="flex items-center">
             Enter Account
             <ArrowRight className="ml-2 h-4 w-4" />
